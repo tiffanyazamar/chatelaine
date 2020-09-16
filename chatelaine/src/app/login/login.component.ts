@@ -12,14 +12,16 @@ export class LoginComponent {
     username: '',
     password: ''
   };
+  loggedInUser:any;
+
   constructor(private http: HttpClient
   ) { }
 
   login() {
     this.http
       .post<any>(`http://localhost:8080/login`, this.model)
-      .subscribe(success => {
-        console.log(success);
+      .subscribe(result => {
+        this.loggedInUser = result;
       });
   }
 
