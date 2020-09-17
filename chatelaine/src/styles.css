@@ -1,1 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    width: 100%; 
+    height: 100%;
+    
+    cursor: url("./assets/images/castle.svg"), pointer;
+    background-image: url("./assets/images/wallpaper.jpg");
+
+  }
+  .bg-light {
+    background-color: #f8f9fa00!important;
+}
