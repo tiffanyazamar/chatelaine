@@ -11,6 +11,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { LandlordComponent } from './landlord/landlord.component';
+import { HomeComponent } from './home/home.component';
+import { TenantComponent } from './tenant/tenant.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -19,9 +22,12 @@ import { LandlordComponent } from './landlord/landlord.component';
     LoginComponent,
     RegisterComponent,
     PageNotFoundComponent,
-    LandlordComponent
+    LandlordComponent,
+    HomeComponent,
+    TenantComponent,
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
