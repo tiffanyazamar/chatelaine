@@ -28,9 +28,9 @@
     <div class="">
         <label class="description" for="desc">Description </label>
         <div>
-            <textarea name="desc" rows="4" cols="50" maxlength="500" ></textarea>
+            <textarea name="desc" rows="4" cols="50" maxlength="500" [(ngModel)]="newTicketDesc"></textarea>
         </div>
         <br /><br />
-        <button  (click)="addTicket()" type="button">SUBMIT</button>
+        <button  (click)="sendTicket()" type="button">SUBMIT</button>
     </div>
 </form>

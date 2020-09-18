@@ -31,6 +31,7 @@ export class MaintenanceTComponent implements OnInit {
 
   sendTicket() {
     let t = new Ticket(0, this.newTicketDesc, Date.now(), null, this.authService.loggedInUser, this.statusId)
+    console.log(t);
     this.ms.addTicket(t).subscribe(
       (response: Ticket[]) => {
         this.tickets = response;
