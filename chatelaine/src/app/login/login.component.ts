@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { ActivatedRoute, Router } from '@angular/router';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-login',
@@ -14,14 +16,17 @@ export class LoginComponent {
   };
   loggedInUser:any;
 
-  constructor(private http: HttpClient
+  constructor(private http: HttpClient,
+      private router:Router,
+      private authService: AuthService
   ) { }
 
   login() {
     this.http
-      .post<any>(`http://localhost:8080/login`, this.model)
+      .post<any>(`http://localhost:8080/user/login`, this.model)
       .subscribe(result => {
-        this.loggedInUser = result;
+        this.authService.loggedInUser = result;
+        this.router.navigate(['home']);
       });
   }
 
