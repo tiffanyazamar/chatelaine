@@ -1,9 +1,16 @@
-<input type = "text" [(ngModel)] = "model.username" id = "username"/>
-<input type = "password" [(ngModel)] = "model.password" id = "password"/>
+<div class="card login" >
+  <div class="card-body">
+    <div class="form-group">
+      <label for="username">Username</label>
 
-<button (click) = "login()">Login</button>
+      <input type="text" class="form-control" [(ngModel)]="model.username" id="username" />
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" [(ngModel)]="model.password" id="password" />
+    </div>
+    <button class="btn btn-success" (click)="login()">Login</button>
 
-<a href = "/register">Register</a>
-
-
-Hello {{loggedInUser.firstName}} {{loggedInUser.lastName}}!!
+    <a class = "btn btn-warning" href="/register">Register</a>
+  </div>
+</div>

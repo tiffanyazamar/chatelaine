@@ -10,6 +10,13 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+<<<<<<< HEAD
+=======
+import { LandlordComponent } from './landlord/landlord.component';
+import { HomeComponent } from './home/home.component';
+import { TenantComponent } from './tenant/tenant.component';
+import { CommonModule } from '@angular/common';
+>>>>>>> 74acad2a96fac0f48b20b96e2c5881469279313e
 import { AccountTComponent } from './account-t/account-t.component';
 import { DocumentsTComponent } from './documents-t/documents-t.component';
 import { EventsTComponent } from './events-t/events-t.component';
@@ -24,6 +31,12 @@ import { EventsAComponent } from './events-a/events-a.component';
     LoginComponent,
     RegisterComponent,
     PageNotFoundComponent,
+<<<<<<< HEAD
+=======
+    LandlordComponent,
+    HomeComponent,
+    TenantComponent,
+>>>>>>> 74acad2a96fac0f48b20b96e2c5881469279313e
     AccountTComponent,
     DocumentsTComponent,
     EventsTComponent,
@@ -32,6 +45,7 @@ import { EventsAComponent } from './events-a/events-a.component';
     EventsAComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,

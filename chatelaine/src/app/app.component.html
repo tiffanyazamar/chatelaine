@@ -18,17 +18,36 @@
         <li class="nav-item">
             <a class="nav-link" routerLink="/tickets">Maintenance</a>
           </li>
-      </ul>
-      <div class="dropdown">
-        <span class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          User Option
-        </span>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="/userProfile">Profile</a>
-          <a class="dropdown-item" href="#">Logout</a>
+          <li class="nav-item" *ngIf = "loggedInUser">
+              <a class="nav-link" href="/tickets">Maintenance Tickets</a>
+            </li>
+        </ul>
+        <div class="dropdown" *ngIf = "loggedInUser">
+          <span class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            {{loggedInUser?.firstName}}
+          </span>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="/userProfile">Profile</a>
+            <a class="dropdown-item" href="#">Logout</a>
+          </div>
+        </div>
+        <div class="dropdown" *ngIf = "!loggedInUser">
+          <a class = "btn" href = "/login">Login</a>
+          <a class = "btn" href = "/register">Register</a>
+
         </div>
       </div>
-    </div>
-  </nav> 
-  <router-outlet></router-outlet>
+    </nav> 
+    <br/> <br/>
+
+
+
+
+    
+  <div class = "center">
+    <router-outlet></router-outlet>
+  
+  </div>
+
+
 
