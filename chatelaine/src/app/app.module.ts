@@ -10,14 +10,16 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { LandlordComponent } from './landlord/landlord.component';
 import { HomeComponent } from './home/home.component';
 import { TenantComponent } from './tenant/tenant.component';
 import { CommonModule } from '@angular/common';
+
 import { AccountTComponent } from './account-t/account-t.component';
 import { DocumentsTComponent } from './documents-t/documents-t.component';
 import { EventsTComponent } from './events-t/events-t.component';
 import { MaintenanceTComponent } from './maintenance-t/maintenance-t.component';
+import { DocumentsAComponent } from './documents-a/documents-a.component';
+import { EventsAComponent } from './events-a/events-a.component';
 
 @NgModule({
   declarations: [
@@ -26,13 +28,14 @@ import { MaintenanceTComponent } from './maintenance-t/maintenance-t.component';
     LoginComponent,
     RegisterComponent,
     PageNotFoundComponent,
-    LandlordComponent,
     HomeComponent,
     TenantComponent,
     AccountTComponent,
     DocumentsTComponent,
     EventsTComponent,
-    MaintenanceTComponent
+    MaintenanceTComponent,
+    DocumentsAComponent,
+    EventsAComponent
   ],
   imports: [
     CommonModule,

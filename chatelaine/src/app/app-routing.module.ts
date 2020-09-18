@@ -5,7 +5,6 @@ import { RegisterComponent } from './register/register.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HomeComponent } from './home/home.component';
-import { LandlordComponent } from './landlord/landlord.component';
 import { TenantComponent } from './tenant/tenant.component';
 import { DocumentsTComponent } from './documents-t/documents-t.component';
 import { EventsTComponent } from './events-t/events-t.component';
@@ -16,7 +15,6 @@ const routes: Routes = [
   {path:'login', component:LoginComponent},
   {path:'register', component:RegisterComponent},
   {path:'userProfile', component:UserProfileComponent},
-  {path:'landlord', component:LandlordComponent},
   {path:'tenant', component:TenantComponent},
   {path:'documents', component:DocumentsTComponent},
   {path:'events', component:EventsTComponent},
