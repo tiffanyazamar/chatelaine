@@ -7,6 +7,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { HomeComponent } from './home/home.component';
 import { LandlordComponent } from './landlord/landlord.component';
 import { TenantComponent } from './tenant/tenant.component';
+import { DocumentsTComponent } from './documents-t/documents-t.component';
+import { EventsTComponent } from './events-t/events-t.component';
+import { MaintenanceTComponent } from './maintenance-t/maintenance-t.component';
 
 const routes: Routes = [
   {path:'', component:HomeComponent},
@@ -15,6 +18,9 @@ const routes: Routes = [
   {path:'userProfile', component:UserProfileComponent},
   {path:'landlord', component:LandlordComponent},
   {path:'tenant', component:TenantComponent},
+  {path:'documents', component:DocumentsTComponent},
+  {path:'events', component:EventsTComponent},
+  {path:'tickets', component:MaintenanceTComponent},
   {path:'**', component:HomeComponent}
 
 

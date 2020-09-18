@@ -14,6 +14,10 @@ import { LandlordComponent } from './landlord/landlord.component';
 import { HomeComponent } from './home/home.component';
 import { TenantComponent } from './tenant/tenant.component';
 import { CommonModule } from '@angular/common';
+import { AccountTComponent } from './account-t/account-t.component';
+import { DocumentsTComponent } from './documents-t/documents-t.component';
+import { EventsTComponent } from './events-t/events-t.component';
+import { MaintenanceTComponent } from './maintenance-t/maintenance-t.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +29,10 @@ import { CommonModule } from '@angular/common';
     LandlordComponent,
     HomeComponent,
     TenantComponent,
+    AccountTComponent,
+    DocumentsTComponent,
+    EventsTComponent,
+    MaintenanceTComponent
   ],
   imports: [
     CommonModule,
