@@ -11,6 +11,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { LandlordComponent } from './landlord/landlord.component';
+import { AccountTComponent } from './account-t/account-t.component';
+import { DocumentsTComponent } from './documents-t/documents-t.component';
+import { EventsTComponent } from './events-t/events-t.component';
+import { MaintenanceTComponent } from './maintenance-t/maintenance-t.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +23,11 @@ import { LandlordComponent } from './landlord/landlord.component';
     LoginComponent,
     RegisterComponent,
     PageNotFoundComponent,
-    LandlordComponent
+    LandlordComponent,
+    AccountTComponent,
+    DocumentsTComponent,
+    EventsTComponent,
+    MaintenanceTComponent
   ],
   imports: [
     BrowserModule,
