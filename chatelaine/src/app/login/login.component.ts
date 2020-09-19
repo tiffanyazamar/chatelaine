@@ -23,7 +23,7 @@ export class LoginComponent {
 
   login() {
     this.http
-      .post<any>(`http://localhost:8080/user/login`, this.model)
+      .post<any>(`http://localhost:8080/data/user/login`, this.model)
       .subscribe(result => {
         this.authService.loggedInUser = result;
         this.router.navigate(['home']);

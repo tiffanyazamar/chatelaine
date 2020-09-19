@@ -24,7 +24,7 @@
         </ul>
         <div class="dropdown" *ngIf = "loggedInUser">
           <span class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            {{loggedInUser?.firstName}}
+            {{loggedInUser?.firstName}}  {{loggedInUser?.lastName}}
           </span>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
             <a class="dropdown-item" href="/userProfile">Profile</a>
