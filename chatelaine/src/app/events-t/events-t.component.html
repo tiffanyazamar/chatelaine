@@ -8,7 +8,7 @@
         <thead>
             <tr class="">
                 <th id="">ID</th>
-                <th id="">Name</th>
+                <th id="">Event</th>
                 <th id="">Date</th>
                 <th id="">Description</th>
                 <th id="">Host</th>
@@ -16,6 +16,18 @@
             </tr>
         </thead>
         <tbody class="" id="">
+            <tr *ngFor="let e of events">
+                <td>{{e.eventID}}</td>
+                <td>{{e.eventName}}</td>
+                <td>{{e.eventDescription}}</td>
+                <td>{{e.eventDate}}</td>
+                <td>{{e.eventCreator.userID}}</td>
+                <td>
+                    <li *ngFor="let g of e.userList">
+                        <ul>{{g.firstName}} {{g.LastName}}</ul>
+                    </li>
+                </td>
+            </tr>
         </tbody>
     </table>
 </div>

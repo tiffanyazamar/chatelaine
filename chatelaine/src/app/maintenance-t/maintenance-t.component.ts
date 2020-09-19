@@ -21,15 +21,24 @@ export class MaintenanceTComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    this.getTickets();
+    this.getTicketsByAuthor();
   }
-  getTickets() {
-    this.ms.getAllTickets().subscribe(
+
+  getTicketsByAuthor(){
+    this.ms.getTicketsByAuthor(this.loggedInUser).subscribe(
       (response: Ticket[]) => {
         this.tickets = response;
       }
     )
   }
+
+  // getTickets() {
+  //   this.ms.getAllTickets().subscribe(
+  //     (response: Ticket[]) => {
+  //       this.tickets = response;
+  //     }
+  //   )
+  // }
 
   sendTicket() {
     let t = new Ticket(0, this.newTicketDesc, null, null, this.authService.loggedInUser, null)

@@ -25,6 +25,10 @@ export class MaintenanceService {
     return this.http.get<Ticket[]>('http://localhost:8080/chatelaine/ticket/'+sId);
   }
 
+  getTicketsByAuthor(user:User) {
+    return this.http.get<Ticket[]>('http://localhost:8080/chatelaine/ticket/user/'+user);
+  }
+
   getTicket(id:number): Observable<any> {
     return this.http.get<any>('http://localhost:8080/chatelaine/ticket/'+id+'/');
   }
