@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Ticket } from './ticket';
 import { Observable } from 'rxjs';
@@ -8,6 +8,12 @@ import { User } from './user';
   providedIn: 'root'
 })
 export class MaintenanceService {
+
+  httpOptions = {
+    headers: new HttpHeaders({'Content-Type': 'application/json'})
+  }
+  
+
 
   constructor(private http: HttpClient) {}
 
@@ -25,7 +31,7 @@ export class MaintenanceService {
 
   addTicket(t:Ticket): Observable<Ticket[]> {
     console.log(t);
-    return this.http.post<Ticket[]>('http://localhost:8080/chatelaine/ticket', t);
+    return this.http.post<Ticket[]>('http://localhost:8080/chatelaine/ticket', t, this.httpOptions);
   }
 
   getUser(id:number) {

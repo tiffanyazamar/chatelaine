@@ -16,6 +16,22 @@
             </tr>
         </thead>
         <tbody class="" id="">
+            <!-- <tr *ngFor="let t of tickets">
+                <td>{{t.ticketId}}</td>
+                <td>{{t.description}}</td>
+                <td>{{t.submitted | date:'medium' }}</td>
+                <td>{{t.resolved | date:'medium' }}</td>
+                <td>{{t.author}}</td>
+                <td>{{t.statusId}}</td>
+            </tr> -->
+            <tr *ngFor="let t of loggedInUser.tickets">
+                <td>{{t.ticketId}}</td>
+                <td>{{t.description}}</td>
+                <td>{{t.submitted | date:'medium' }}</td>
+                <td>{{t.resolved | date:'medium' }}</td>
+                <td>{{loggedInUser.username}}</td>
+                <td>{{t.statusId}}</td>
+            </tr>
         </tbody>
     </table>
 </div>

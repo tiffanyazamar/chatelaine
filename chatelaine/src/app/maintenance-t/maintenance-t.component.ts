@@ -12,11 +12,13 @@ export class MaintenanceTComponent implements OnInit {
 
   tickets: Ticket[];
   newTicketDesc: string;
-  statusId: number;
   newTicketId: number;
   userId: number;
+  loggedInUser;
 
-  constructor(private ms: MaintenanceService, private authService: AuthService) { }
+  constructor(private ms: MaintenanceService, private authService: AuthService) {
+    this.loggedInUser = authService.loggedInUser;
+   }
 
   ngOnInit(): void {
     this.getTickets();
@@ -30,7 +32,7 @@ export class MaintenanceTComponent implements OnInit {
   }
 
   sendTicket() {
-    let t = new Ticket(0, this.newTicketDesc, Date.now(), null, this.authService.loggedInUser, this.statusId)
+    let t = new Ticket(0, this.newTicketDesc, null, null, this.authService.loggedInUser, null)
     console.log(t);
     this.ms.addTicket(t).subscribe(
       (response: Ticket[]) => {

@@ -11,7 +11,7 @@ export class Ticket {
     constructor(ticketId:number, description:String, submitted:any, resolved:any, author:User, statusId:number) {
         this.ticketId = ticketId,
         this.description = description,
-        this.submitted = submitted,
+        this.submitted = new Date(submitted).toLocaleString(),
         this.resolved = resolved,
         this.author = author,
         this.statusId = statusId
