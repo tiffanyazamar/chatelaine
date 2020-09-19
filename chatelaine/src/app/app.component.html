@@ -6,21 +6,18 @@
   
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
+        <li class="nav-item active" *ngIf = "loggedInUser">
           <a class="nav-link" [routerLink]="">Home <span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" >
           <a class="nav-link" routerLink="/documents">Documents</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" >
           <a class="nav-link" routerLink="/events">Events</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" >
             <a class="nav-link" routerLink="/tickets">Maintenance</a>
-          </li>
-          <li class="nav-item" *ngIf = "loggedInUser">
-              <a class="nav-link" href="/tickets">Maintenance Tickets</a>
-            </li>
+        </li>
         </ul>
         <div class="dropdown" *ngIf = "loggedInUser">
           <span class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

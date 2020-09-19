@@ -23,7 +23,11 @@ export class LoginComponent {
 
   login() {
     this.http
+<<<<<<< HEAD
       .post<any>(`http://localhost:8080/data/user/login`, this.model)
+=======
+      .post<any>(`http://localhost:8080/chatelaine/user/login`, this.model)
+>>>>>>> e50f56f7e69abaf2c25f4023e0a99569caf0d009
       .subscribe(result => {
         this.authService.loggedInUser = result;
         this.router.navigate(['home']);
