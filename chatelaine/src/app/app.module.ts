@@ -20,6 +20,7 @@ import { EventsTComponent } from './events-t/events-t.component';
 import { MaintenanceTComponent } from './maintenance-t/maintenance-t.component';
 import { DocumentsAComponent } from './documents-a/documents-a.component';
 import { EventsAComponent } from './events-a/events-a.component';
+import { MaintenanceAComponent } from './maintenance-a/maintenance-a.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { EventsAComponent } from './events-a/events-a.component';
     EventsTComponent,
     MaintenanceTComponent,
     DocumentsAComponent,
-    EventsAComponent
+    EventsAComponent,
+    MaintenanceAComponent
   ],
   imports: [
     CommonModule,

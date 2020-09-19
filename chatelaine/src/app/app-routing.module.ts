@@ -9,6 +9,7 @@ import { TenantComponent } from './tenant/tenant.component';
 import { DocumentsTComponent } from './documents-t/documents-t.component';
 import { EventsTComponent } from './events-t/events-t.component';
 import { MaintenanceTComponent } from './maintenance-t/maintenance-t.component';
+import { MaintenanceAComponent } from './maintenance-a/maintenance-a.component';
 
 const routes: Routes = [
   {path:'', component:HomeComponent},
@@ -18,9 +19,9 @@ const routes: Routes = [
   {path:'tenant', component:TenantComponent},
   {path:'documents', component:DocumentsTComponent},
   {path:'events', component:EventsTComponent},
-  {path:'tickets', component:MaintenanceTComponent},
-  {path:'**', component:HomeComponent}
-
+  {path:'tickets', component:MaintenanceAComponent},
+  {path:'**', component:HomeComponent},
+  
 
 ];
 
